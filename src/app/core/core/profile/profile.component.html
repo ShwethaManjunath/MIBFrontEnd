@@ -1,0 +1,74 @@
+<!-- Modal -->
+<form (submit)="updateProfile($event)" class="form-horizontal" role="form">
+  <div id="userForm" class="modal fade" role="dialog">
+
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="background-color:cornflowerblue;">
+          <button type="button" class="close" data-dismiss="modal" #closeBtn>>&times;</button>
+          <h4 class="modal-title" style="font-weight: bold;">Update User</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" value={{userData.name}}>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Contact no:</label>
+            <input type="number" class="form-control" id="phone" value={{userData.phone}}>
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea type="text" class="form-control" id="address" value={{userData.address}}></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Save</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</form>
+
+<div class="container">
+  <div class="row" style="margin-top:5%;">
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:cornflowerblue">
+        <h4>User Profile
+          <button type="button" class="btn btn-danger btn-lg" style="margin-left:80% " data-toggle="modal" data-target="#userForm">Update</button></h4>
+
+      </div>
+      <div class="panel-body">
+        <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+          <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1"
+            class="img-circle img-responsive">
+
+        </div>
+        <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
+          <div class="container">
+            <h2 style="color:cornflowerblue;font-weight: bold">{{userData.name}}</h2>
+            <p> <b> ({{accountData.user_type}})</b></p>
+          </div>
+          <hr>
+          <ul class="container details">
+            <li>
+              <p><span class="glyphicon glyphicon-phone one" style="width:50px;"></span>{{userData.phone}}</p>
+            </li>
+            <li>
+              <p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>{{userData.email_id}}</p>
+            </li>
+            <li>
+              <p><span class="glyphicon glyphicon-home one" style="width:50px;"></span>{{userData.address}}</p>
+            </li>
+          </ul>
+          <hr>
+          <div class="col-sm-5 col-xs-6 tital ">
+            <p style="font-weight: bold;color:cornflowerblue">Date Of Joining:</p>{{userData.created_date | date}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

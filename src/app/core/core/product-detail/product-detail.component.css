@@ -1,0 +1,19 @@
+img{
+  
+    width:400px;
+    height:400px;
+}
+.row{
+    margin-top:40%
+}
+
+#details{
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 5%;  
+}
+h2{
+    color: cornflowerblue;
+    font-size: 20px;
+}

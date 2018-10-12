@@ -1,0 +1,29 @@
+<div class='col-md-8 col-md-offset-2'>
+  <carousel>
+    <slide>
+      <img src="../assets/images/player1.jpg" alt="first slide" style="display: block; width: 100%;margin-top: 20px; height: 650px;">
+    </slide>
+    <slide>
+      <img src="../../../../assets/images/player2.jpg/" alt="second slide" style="display: block; width: 100%;margin-top: 20px; height: 650px;">
+    </slide>
+    <slide>
+      <img src="../../../../assets/images/player3.jpg" alt="third slide" style="display: block; width: 100%;margin-top: 20px; height: 650px;">
+    </slide>
+  </carousel><br><br>
+</div>
+<div class="container col-md-offset-2">
+  <div class="row" >
+      <div class="col-sm-4" *ngFor="let player of playersData.player">
+          <div class="team-members">
+              <div class="team-avatar">
+                  <img class="img-responsive" (click)="goToPlayer(player._id)" src={{player.image}} alt="">
+              </div>
+              <div class="team-desc">
+                  <h4>{{ player.player_name }}</h4>
+                  <span>({{ player.player_type }})</span>
+              </div>
+          </div>
+          <br>
+      </div>
+  </div>
+</div>

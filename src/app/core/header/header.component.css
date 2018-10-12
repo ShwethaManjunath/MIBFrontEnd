@@ -1,0 +1,27 @@
+.header-container {
+    background-color: blue;
+    height: 80px
+}
+.img-dimension {
+    height: 50px;
+}
+.top-header-icons{
+    color: white;
+    font-size: 40px;
+    margin-top: 2%;
+    margin-right: 0px;
+}
+.header-navs {
+    color: white;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 3%;
+    cursor: pointer; 
+    font-weight: bold;
+}
+nav-tabs{
+    height: 20px;
+    margin-top:20px;
+    
+}
+

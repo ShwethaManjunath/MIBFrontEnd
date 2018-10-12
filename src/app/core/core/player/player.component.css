@@ -1,0 +1,13 @@
+img{
+    height: 250px;
+    width:200px;
+    
+}
+h4,span{
+    color: #3f96fa;
+    font-weight: bold;
+    
+}
+.team-members{
+    border: aquamarine;
+}

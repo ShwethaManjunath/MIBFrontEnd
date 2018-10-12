@@ -1,0 +1,42 @@
+<div class="main">
+    <div class="row" class="col-md-12 col-md-offset-1 top">
+        <div id="image" class="col-md-6">
+            <iframe width="700" height="520" class="e2e-iframe-trusted-src" [src]="safeURL">
+            </iframe>
+        </div>
+        <div id="details" class="col-md-6 ">
+            <p>Like:</p><p>{{videoLikes}}</p>
+            <p>DisLike:</p><p>{{videodisLikes}}</p>
+            
+            <a class="btn btn-info btn-lg" (click)="goToLike()">
+                        <span class="glyphicon glyphicon-thumbs-up"></span> Like
+            </a>
+            <a  class="btn btn-danger btn-lg" (click)="goToDisLike()">
+                    <span class="glyphicon glyphicon-thumbs-down"></span> DisLike
+        </a><br><br>
+            <label>Comment</label><br>
+            <form id="commentForm" (submit)="saveComment($event)" class="form-horizontal" role="form">
+            <textarea name="comments" id="comment"></textarea><br>
+            <button type="submit" class="btn btn-danger btn-lg" >
+                    <span class="glyphicon glyphicon-comment"></span>comment</button>
+            </form>
+            <div style="display: block">
+            <h2 style="float:left">comments : </h2><br><br><br><br>
+            <div style="text-align: left;">
+              <p style="font-weight: bold;color:cornflowerblue">{{username}}: {{commentDetails}}</p>     
+            </div>
+            </div>
+           <!-- <div *ngFor="let item of commentData.videoComment">{{item}}</div> -->
+        </div>
+    </div>
+ 
+    <div class="row">
+            <br/>
+            <h2>Related Videos</h2>
+            <hr>
+            <div class="col-md-6 thumbContainer" *ngFor="let item of videosData">
+                <p (click)="getVideoId(item.videoYtID)"> <img src="{{item.thumbnails}}" /></p>
+                <p>{{item.videoTitle}}</p>
+            </div>
+        </div>
+</div>

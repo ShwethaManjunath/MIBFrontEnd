@@ -1,0 +1,21 @@
+.card-div {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 2px 5px #888888;
+    background-color: #e6f7ff;
+    width: 250px
+}
+.secondCards {
+    margin-left: 3%;
+}
+
+img{
+    height: 300px;
+    width:300px;
+}
+
+h4,h2{
+    color: #3f96fa;
+    font-weight: bold;
+    text-align: center;
+}

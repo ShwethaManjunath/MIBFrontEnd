@@ -1,0 +1,96 @@
+<div class="container-fluid" style="margin-top:10px">
+  <div class="row" class="col-md-10 col-md-offset-1" *ngFor="let player of playerData.player">
+      <div id="image" class="col-md-2">
+        <div class="tab-pane active"><img src= {{player.image}} /></div>
+      </div>
+      <div id="profile" class="col-md-7">
+        <h2>{{player.player_name}}</h2>
+        <p> {{player.profile_details}}</p>
+      </div>
+  </div>
+  <div class="col-md-8 col-md-offset-1">
+    <hr>
+    <h2>Player Statistics</h2>
+    <h3 style="margin-left:40%">T20 Statistics</h3>
+    <table class="table table-bordered" *ngFor="let player of playerData.t20">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Match played</th>
+          <th scope="col">Runs Scored</th>
+          <th scope="col">Average score</th>
+          <th scope="col">#100</th>
+          <th scope="col">#50</th>
+          <th scope="col">Number Wickets</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="col">{{player.no_matches}}</td>
+          <td scope="col">{{player.runs_scored}}</td>
+          <td scope="col">{{player.average}}</td>
+          <td scope="col">{{player.no_100}}</td>
+          <td scope="col">{{player.no_50}}</td>
+          <td scope="col">{{player.no_wickets}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-left:40%">ODI Statistics</h3>
+    <table class="table table-bordered" *ngFor="let player of playerData.odi">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Match played</th>
+          <th scope="col">Runs Scored</th>
+          <th scope="col">Average score</th>
+          <th scope="col">#100</th>
+          <th scope="col">#50</th>
+          <th scope="col">Number Wickets</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="col">{{player.no_matches}}</td>
+          <td scope="col">{{player.runs_scored}}</td>
+          <td scope="col">{{player.average}}</td>
+          <td scope="col">{{player.no_100}}</td>
+          <td scope="col">{{player.no_50}}</td>
+          <td scope="col">{{player.no_wickets}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+
+
+    <h3 style="margin-left:40%">Test Statistics</h3>
+    <table class="table table-bordered" *ngFor="let player of playerData.test">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Match played</th>
+          <th scope="col">Runs Scored</th>
+          <th scope="col">Average score</th>
+          <th scope="col">#100</th>
+          <th scope="col">#50</th>
+          <th scope="col">Number Wickets</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="col">{{player.no_matches}}</td>
+          <td scope="col">{{player.runs_scored}}</td>
+          <td scope="col">{{player.average}}</td>
+          <td scope="col">{{player.no_100}}</td>
+          <td scope="col">{{player.no_50}}</td>
+          <td scope="col">{{player.no_wickets}}</td>
+
+
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+</div>
+
